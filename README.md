@@ -1,2 +1,3 @@
 # Web Himpunan Mahasiswa
-Bootstrap website for Student Associations in ITB. Using Wordpress as main content management system.
+Bootstrap website for Student Associations in ITB.
+Using Wordpress as CMS.

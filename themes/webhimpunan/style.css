@@ -13,11 +13,12 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
 */
   
-@import url("css/bootstrap.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css");
 @import url("css/style.css");
-@import url("css/bubbles.css");
 @import url("css/responsive.css");
 @import url("css/animate.css");
 @import url("css/superfish.css");
 @import url("css/simple-line-icons.css");    
-@import url("http://fonts.googleapis.com/css?family=Antic|Raleway:300")
+@import url("http://fonts.googleapis.com/css?family=Antic|Raleway:300");
+@import url("css/owl.carousel.css");
+@import url("css/owl.theme.css");

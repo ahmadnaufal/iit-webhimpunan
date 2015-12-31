@@ -107,3 +107,13 @@ $('#services img').hover(
        function(){ $(this).addClass('animated pulse') },
        function(){ $(this).removeClass('animated pulse') })
 
+
+//========================
+//owl-example
+//========================
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel();
+ 
+});
+

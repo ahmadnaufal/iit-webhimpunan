@@ -29,25 +29,26 @@
                         
                            <a class="navbar-brand" href="#hero">
                             <div class="brandicon">
-                              <img src="img/HMIF.png" alt="HMIF" style="float:none">
-                              HMIF
+                              <img src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="HMIF" style="float:none">
+                              Home
                             </div> 
                         </a>
                     </div>
 
                 <div class="collapse navbar-collapse">
                     <ul class="sf-menu nav navbar-nav navbar-right"><!--YOUR NAVIGATION ITEMS STRAT BELOW-->
-                        <li><a href="#profile">Profil</a>
+                        <li><a href="#profile">HMIF</a>
                             <ul>
-                              <li><a href="sejarah.html">Sejarah</a></li>
-                              <li><a href="pengurus.html">Pengurus</a></li>
+                              <li><a href="#">Profil</a></li>
+                              <li><a href="#">Struktur Organisasi</a></li>
                             </ul>
                         </li>
-                        <li><a href="#news">Berita</a>
+                        <li><a href="#news">Kegiatan</a>
                             <ul>
-                              <li><a href="sejarah.html">Event</a></li>
-                              <li><a href="pengurus.html">Kalender</a></li>
-                              <li><a href="pengurus.html">Keprofesian</a></li>
+                              <li><a href="#">Event</a></li>
+                              <li><a href="#">Keprofesian</a></li>
+                              <li><a href="#">Pojok Akademik</a></li>
+                              <li><a href="#">Kalender</a></li>
                             </ul>
                         </li>
 
@@ -70,7 +71,7 @@
     =========================== -->
      <div id="profile" class="container">
       <div class="setionhead wow bounceIn" data-wow-duration="2s">
-             <h2><span class="icon icon-user" style="padding-right:10px"></span> Profil</h2>
+             <h2><span class="icon icon-user" style="padding-right:10px"></span> HMIF</h2>
       </div>
  
         <!-- LEFT PART OF THE profile SECTION -->
@@ -81,7 +82,7 @@
              </div>
 
               <div class="myphoto wow fadeInUp" data-wow-duration="2s">
-                <img src="img/hmif.png"></img>
+                <img src="<?php bloginfo('template_directory'); ?>/img/hmif1.png"></img>
               </div>
 
    
@@ -92,9 +93,9 @@
             
              <p style="color:#ffffff; padding-top:20%"> Himpunan Mahasiswa Informatika Institut Teknologi Bandung (HMIF ITB) merupakan sebuah organisasi yang beranggotakan mahasiswa Teknik Informatika dan Sistem & Teknologi Informasi </p>
 
-             <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> SEJARAH</button>
+             <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> PROFIL</button>
 
-             <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> PENGURUS</button>
+             <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> STRUKTUR</button>
    
          </div>
                
@@ -110,7 +111,7 @@
     =========================== -->
     <div id="news">
         <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
-           <h2 style="color:#000000"><span class="icon icon-calendar" style="padding-right:10px"></span> Acara </h2>
+           <h2 style="color:#000000"><span class="icon icon-calendar" style="padding-right:10px"></span> Kegiatan </h2>
            <hr class="separetor">            
         </div><!-- news SECTION HEAD END -->   
         
@@ -151,7 +152,7 @@
             </div>
 
             <div class="sectionfooter">
-                <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> ARCHIVE</button>
+                <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> SEE ALL</button>
             </div>
         
     </div>
@@ -170,10 +171,52 @@
          </div><!--ACHIEVEMENT SECTION HEADING END-->
          
 
-        <!-- ACHIEVEMENT ITEMS START -->
+        <div id="demo">
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+
+              <div id="owl-demo" class="owl-carousel">
+                
+                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="Lazy Owl Image">
+                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
+                </div>
+               
+                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/gemastik.png" alt="Lazy Owl Image">
+                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
+                </div>
+
+                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="Lazy Owl Image">
+                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
+                </div>
+
+                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="Lazy Owl Image">
+                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
+                </div>
+
+                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/gemastik.png" alt="Lazy Owl Image">
+                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
+                </div>
+
+                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="Lazy Owl Image">
+                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sectionfooter" style="padding-top:10px">
+        <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> SEE ALL</button>
+      </div>
+
   
     </div>
     <!-- ACHIEVEMENT SECTION END -->
+
 
 
     <!-- ===========================
@@ -187,6 +230,7 @@
 
 
     </div><!-- TESTIMONIAL SECTION END -->
+
 
      
 <?php get_footer(); ?>

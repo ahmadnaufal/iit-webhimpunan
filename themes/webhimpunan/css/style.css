@@ -373,9 +373,7 @@ NAVIGATION BAR
 .navbar {
     background:#F8C249;
     font-color:#000;
-    color:#000;
-    border:0;
-  
+    border:0;  
 }
 
 .navbar-inverse .navbar-brand,
@@ -384,6 +382,15 @@ NAVIGATION BAR
     font-size: 20px;
     
 }
+
+.item .lazyOwl {
+    width:100%;
+    height:100%;
+    padding-right:10px;
+    padding-bottom:10px;
+}
+
+
 
 
 

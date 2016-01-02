@@ -45,10 +45,9 @@
                         </li>
                         <li><a href="#news">Kegiatan</a>
                             <ul>
-                              <li><a href="#">Event</a></li>
+                              <li><a href="#">Kalender & Event</a></li>
                               <li><a href="#">Keprofesian</a></li>
                               <li><a href="#">Pojok Akademik</a></li>
-                              <li><a href="#">Kalender</a></li>
                             </ul>
                         </li>
 

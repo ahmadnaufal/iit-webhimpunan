@@ -95,7 +95,7 @@
              <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> PROFIL</button>
 
              <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> STRUKTUR</button>
-   
+ 
          </div>
                
      </div>
@@ -153,6 +153,16 @@
             <div class="sectionfooter">
                 <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> SEE ALL</button>
             </div>
+
+        <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
+           <h2 style="color:#000000"><span class="icon icon-calendar" style="padding-right:10px"></span> Events Calendar </h2>
+           <hr class="separetor">            
+        </div><!-- news SECTION HEAD END -->   
+        <div class="sectioncontent container">
+           <div class="events-calendar">
+                <?php echo do_shortcode('[calendar id="4"]'); ?>
+          </div>
+        </div>
         
     </div>
     <!-- NEWS SECTION END -->
@@ -229,7 +239,5 @@
 
 
     </div><!-- TESTIMONIAL SECTION END -->
-
-
      
 <?php get_footer(); ?>

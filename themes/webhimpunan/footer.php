@@ -76,11 +76,7 @@
     </script>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php bloginfo('template_url'); ?>/http://code.jquery.com/jquery-latest.min.js"></script>
     
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php bloginfo('template_url'); ?>/https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     
     <!--Other necessary scripts-->  
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.nicescroll.min.js"></script>
@@ -98,13 +94,29 @@
 
     jQuery(document).ready(function(){
       jQuery('ul.sf-menu').superfish();
-
+      if (window.matchMedia('(max-width: 980px)').matches) {
+        $("#navigation").removeClass("sf-menu");
+      }
+      
     });
-
     </script>
 
+    <script>
 
-   
+    (function($) {
+      var $window = $(window)
+
+      $window.resize(function resize(){
+        if (window.matchMedia('(max-width: 980px)').matches) {
+          return $("#navigation").removeClass("sf-menu");
+        }
+
+        $("#navigation").addClass("sf-menu");
+      
+      }).trigger('resize');
+    })(jQuery);
+    
+    </script>
 
 
 

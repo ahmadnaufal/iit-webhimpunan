@@ -20,7 +20,7 @@
 
        <div class="container">
            
-              <div class="navbar-header">
+              <div class="navbar-header page-scroll">
                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                    <span class="sr-only">Toggle navigation</span>
                    <span class="icon-bar"></span>
@@ -28,7 +28,7 @@
                    <span class="icon-bar"></span>
                 </button>
                 
-                   <a class="navbar-brand" href="../../index.php/#hero">
+                   <a class="navbar-brand page-scroll" href="../../index.php/#hero">
                     <div class="brandicon">
                       <img src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="HMIF" style="float:none">
                       Home
@@ -37,24 +37,26 @@
             </div>
 
         <div class="collapse navbar-collapse">
-            <ul class="sf-menu nav navbar-nav navbar-right"><!--YOUR NAVIGATION ITEMS STRAT BELOW-->
-                <li><a class="page-scroll" href="#profile">Profil</a>
+            <ul class="sf-menu nav navbar-nav navbar-right" id="navigation"><!--YOUR NAVIGATION ITEMS STRAT BELOW-->
+                <li class="dropdown">
+                  <a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="#profile">Profil  <span class="caret"></span></a>
                     <ul>
                       <li><a class="page-scroll" href="#history">Sejarah</a></li>
                       <li><a class="page-scroll" href="#structure">Struktur Organisasi</a></li>
                     </ul>
                 </li>
-                <li><a href="../../index.php/#news">Kegiatan</a>
+                <li class="dropdown">
+                  <a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="../../index.php/#news">Kegiatan  <span class="caret"></span></a>
                     <ul>
-                      <li><a href="../../index.php/#">Kalender & Event</a></li>
-                      <li><a href="../../index.php/#">Keprofesian</a></li>
-                      <li><a href="../../index.php/#">Pojok Akademik</a></li>
+                      <li><a class="page-scroll" href="../../index.php/#">Kalender & Event</a></li>
+                      <li><a class="page-scroll" href="../../index.php/#">Keprofesian</a></li>
+                      <li><a class="page-scroll" href="../../index.php/#">Pojok Akademik</a></li>
                     </ul>
                 </li>
 
-                <li><a href="../../index.php/#achieve">Prestasi</a></li>
-                <li><a href="../../index.php/#gallery">Galeri</a></li>
-                <li><a href="../../index.php/#footer">Kontak</a></li>
+                <li><a class="page-scroll" href="../../index.php/#achieve">Prestasi</a></li>
+                <li><a class="page-scroll" href="../../index.php/#gallery">Galeri</a></li>
+                <li><a class="page-scroll" href="#footer">Kontak</a></li>
                 
             </ul>
         

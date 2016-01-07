@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
   <header>               
         <!-- ===========================
         HERO AREA
@@ -23,7 +24,7 @@
                <div class="container">
                    
                       <div class="navbar-header page-scroll">
-                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                       <button type="button" id="menubutton" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                            <span class="sr-only">Toggle navigation</span>
                            <span class="icon-bar"></span>
                            <span class="icon-bar"></span>
@@ -39,14 +40,16 @@
                     </div>
 
                 <div class="collapse navbar-collapse">
-                    <ul class="sf-menu nav navbar-nav navbar-right"><!--YOUR NAVIGATION ITEMS STRAT BELOW-->
-                        <li><a class="page-scroll" href="#profile">Profil</a>
+                    <ul class="nav navbar-nav sf-menu navbar-right" id="navigation"><!--YOUR NAVIGATION ITEMS STRAT BELOW-->
+                        <li class="dropdown">
+                          <a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="#profile">Profil  <span class="caret"></span></a>
                             <ul>
                               <li><a class="page-scroll" href="index.php/profil/#history">Sejarah</a></li>
                               <li><a class="page-scroll" href="index.php/profil/#structure">Struktur Organisasi</a></li>
                             </ul>
                         </li>
-                        <li><a class="page-scroll" href="#news">Kegiatan</a>
+                        <li class="dropdown">
+                          <a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="#news">Kegiatan  <span class="caret"></span></a>
                             <ul>
                               <li><a class="page-scroll" href="#">Kalender & Event</a></li>
                               <li><a class="page-scroll" href="#">Keprofesian</a></li>

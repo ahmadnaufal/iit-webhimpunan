@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-        
-        
-       <header>               
+  <header>               
         <!-- ===========================
         HERO AREA
         =========================== -->
@@ -17,9 +15,14 @@
          NAVBAR START
          =========================== -->
           <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+               <?php 
+                  // Fix menu overlap bug..
+                  if ( is_admin_bar_showing() ) echo '<div style="min-height: 28px;"></div>'; 
+                ?>
+
                <div class="container">
                    
-                      <div class="navbar-header">
+                      <div class="navbar-header page-scroll">
                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                            <span class="sr-only">Toggle navigation</span>
                            <span class="icon-bar"></span>
@@ -27,7 +30,7 @@
                            <span class="icon-bar"></span>
                         </button>
                         
-                           <a class="navbar-brand" href="#hero">
+                           <a class="navbar-brand page-scroll" href="#hero">
                             <div class="brandicon">
                               <img src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="HMIF" style="float:none">
                               Home
@@ -37,30 +40,32 @@
 
                 <div class="collapse navbar-collapse">
                     <ul class="sf-menu nav navbar-nav navbar-right"><!--YOUR NAVIGATION ITEMS STRAT BELOW-->
-                        <li><a href="#profile">HMIF</a>
+                        <li><a class="page-scroll" href="#profile">Profil</a>
                             <ul>
-                              <li><a href="#">Profil</a></li>
-                              <li><a href="#">Struktur Organisasi</a></li>
+                              <li><a class="page-scroll" href="index.php/profil/#history">Sejarah</a></li>
+                              <li><a class="page-scroll" href="index.php/profil/#structure">Struktur Organisasi</a></li>
                             </ul>
                         </li>
-                        <li><a href="#news">Kegiatan</a>
+                        <li><a class="page-scroll" href="#news">Kegiatan</a>
                             <ul>
-                              <li><a href="#">Kalender & Event</a></li>
-                              <li><a href="#">Keprofesian</a></li>
-                              <li><a href="#">Pojok Akademik</a></li>
+                              <li><a class="page-scroll" href="#">Kalender & Event</a></li>
+                              <li><a class="page-scroll" href="#">Keprofesian</a></li>
+                              <li><a class="page-scroll" href="#">Pojok Akademik</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="#achieve">Prestasi</a></li>
-                        <li><a href="#gallery">Galeri</a></li>
-                        <li><a href="#footer">Kontak</a></li>
+                        <li><a class="page-scroll" href="#achieve">Prestasi</a></li>
+                        <li><a class="page-scroll" href="#gallery">Galeri</a></li>
+                        <li><a class="page-scroll"href="#footer">Kontak</a></li>
                         
                     </ul>
                 
                 </div><!--.nav-collapse -->
             </div>
         </nav><!--navbar end-->        
-     </header><!--header end-->     
+     </header><!--header end-->        
+        
+       
 
      
      
@@ -68,35 +73,26 @@
     <!-- ===========================
     profile SECTION START
     =========================== -->
-     <div id="profile" class="container">
+     <div id="profile" class="container section1">
       <div class="setionhead wow bounceIn" data-wow-duration="2s">
-             <h2><span class="icon icon-user" style="padding-right:10px"></span> HMIF</h2>
+             <h2><span class="icon icon-user" style="padding-right:10px"></span> Profil</h2>
       </div>
  
-        <!-- LEFT PART OF THE profile SECTION -->
-         <div class="col-md-6">
-            
-             <div class="myapps row">
-               <a class="dribbble-follow-button wow bounce" href="#"></a>
-             </div>
+        <!-- LEFT PART OF THE profile SECTION --> 
 
-              <div class="myphoto wow fadeInUp" data-wow-duration="2s">
-                <img src="<?php bloginfo('template_directory'); ?>/img/hmif1.png"></img>
-              </div>
+        <div class="textbox">
 
+             <?php $recent = new WP_Query("pagename=profil"); while($recent->have_posts()) : $recent->the_post();?>
+                <?php the_content(); ?>
+            <?php endwhile; ?>
+
+        </div>
+        
+      <div class="sectionfooter" style="padding-top:10px">
+          <button class="btn" onclick="location.href='index.php/profil/';" id="archive"><span class="glyphicon glyphicon-book"></span> Read More</button>
+      </div>      
    
-         </div>
-         
-         <!-- RIGHT PART OF THE profile SECTION -->
-         <div class="col-md-6">
-            
-             <p style="color:#ffffff; padding-top:20%"> Himpunan Mahasiswa Informatika Institut Teknologi Bandung (HMIF ITB) merupakan sebuah organisasi yang beranggotakan mahasiswa Teknik Informatika dan Sistem & Teknologi Informasi </p>
-
-             <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> PROFIL</button>
-
-             <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> STRUKTUR</button>
- 
-         </div>
+       
                
      </div>
      <!-- profile SECTION END -->
@@ -108,7 +104,7 @@
     <!-- ===========================
     NEWS SECTION START
     =========================== -->
-    <div id="news">
+    <div id="news" class="section2 container">
         <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
            <h2 style="color:#000000"><span class="icon icon-calendar" style="padding-right:10px"></span> Kegiatan </h2>
            <hr class="separetor">            
@@ -171,7 +167,7 @@
      <!-- ===========================
     ACHIEVEMENT SECTION START
     =========================== -->
-    <div id="achieve" class="container">
+    <div id="achieve" class="container section3">
        
         <!-- ACHIEVEMENT SECTION HEADING START -->
         <div class="sectionhead  row wow fadeInUp">
@@ -231,7 +227,7 @@
     <!-- ===========================
     GALLERY SECTION START
     =========================== -->
-    <div id="gallery" class="container">
+    <div id="gallery" class="container section4">
         <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
            <h2><span class="icon icon-picture" style="padding-right:10px"></span>Galeri</h2>
            <hr class="separetor">            
@@ -239,5 +235,7 @@
 
 
     </div><!-- TESTIMONIAL SECTION END -->
-     
+
+
+
 <?php get_footer(); ?>

@@ -81,7 +81,10 @@ hr.separetor{
     height:25px;  
 }
 
-
+.textbox {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 /*================================
 HERO AREA
@@ -108,9 +111,9 @@ HERO AREA
 
 
 /*================================
-profilee SECTION
+ SECTIONs
 ================================*/
-#profile{
+.section1{
     text-align: center;
     width:100%;
     background: #f57f17;
@@ -118,22 +121,41 @@ profilee SECTION
     padding-top:5%;
 }
 
-.myapps{margin-top: 25px;}
-.myapps li{display: inline}
-.myapps li img{
-    width: 30px;
-}
-
-/*================================
-NEWS SECTION
-================================*/
-#news{
+.section2{
     text-align: center;
     width:100%;
     background:#ffffff;
     padding-bottom:20%;
 
 }
+
+.section3{
+    text-align: center;
+    padding-bottom:20%;
+    width:100%;
+    background:#FFEB3B;
+ }
+
+.section4{
+    text-align: center;
+    width:100%;
+    background: #424242;
+    padding-bottom:20%;
+
+}
+
+/*================================
+ END OF SECTION
+================================*/
+
+.myapps{margin-top: 25px;}
+.myapps li{display: inline}
+.myapps li img{
+    width: 30px;
+}
+
+
+
 
 .myphoto img {
     width:70%;
@@ -224,9 +246,7 @@ button#archive {
     padding: 15px 15px 15px 15px;
 }
 
-/*================================
-ACHIEVEMENT SECTION
-================================*/
+
 
 .clientsphoto img{
     width: 80px;
@@ -235,12 +255,7 @@ ACHIEVEMENT SECTION
     border-radius: 50%;
 }
 
-#achieve{
-    text-align: center;
-    padding-bottom:20%;
-    width:100%;
-    background:#FFEB3B;
- }
+
 
 .clientsphoto img:hover{
     border-radius: 15%;
@@ -261,17 +276,6 @@ blockquote p{
 .quote h5{margin-bottom: 5px;}
 
 
-/*================================
-GALLERY
-================================*/
-
-#gallery{
-    text-align: center;
-    width:100%;
-    background: #424242;
-    padding-bottom:20%;
-
-}
 
 
 /*================================
@@ -383,6 +387,9 @@ NAVIGATION BAR
     
 }
 
+/*================================
+NAVIGATION BAR END
+================================*/
 .item .lazyOwl {
     width:100%;
     height:100%;

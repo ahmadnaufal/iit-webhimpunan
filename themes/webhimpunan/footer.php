@@ -3,6 +3,8 @@
     FOOTER START
     =========================== -->    
     <footer id="footer">
+
+        
         <div class="container">
             <span class="bigicon icon-speedometer "></span>
              
@@ -36,27 +38,59 @@
           Pipin Kurniawati <br>
           Zulva Fachrina <br>
         </p>
+
+        
      </footer><!-- FOOTER END -->
 
  
     
+    <!-- SCRIPT -->
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery-1.9.1.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery.easing.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.js"></script>
+    
+        <!-- SCROLL PAGE -->
+    <script>
+      //jQuery for page scrolling feature - requires jQuery Easing plugin
+      $(function() {
+          $('a.page-scroll').bind('click', function(event) {
+              var $anchor = $(this);
+              $('html, body').stop().animate({
+                  scrollTop: $($anchor.attr('href')).offset().top
+              }, 1500, 'easeInOutExpo');
+              event.preventDefault();
+          });
+      });
+    </script>
+
+    <!-- OWL-->
+     <script>
+    //========================
+    //owl-example
+    //========================
+    $(document).ready(function() {
+ 
+      $("#owl-demo").owlCarousel();
+ 
+    });
+    </script>
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="<?php bloginfo('template_url'); ?>/http://code.jquery.com/jquery-latest.min.js"></script>
     
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php bloginfo('template_url'); ?>/https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     
-    <!--Other necessary scripts-->
-    <script src="<?php bloginfo('template_url'); ?>/js/jquery-1.9.1.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.js"></script>
+    <!--Other necessary scripts-->  
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.nicescroll.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.jribbble-1.0.1.ugly.js"></script>
     <script src='<?php bloginfo('template_url'); ?>/js/camera.js'></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/drifolio.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/wow.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/hoverIntent.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/superfish.js"></script>
+    
     <script>new WOW().init();</script>
 
     <!-- initialise Superfish -->
@@ -68,6 +102,11 @@
     });
 
     </script>
+
+
+   
+
+
 
     <?php wp_footer(); ?>
      

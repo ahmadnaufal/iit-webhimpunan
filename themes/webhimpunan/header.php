@@ -12,9 +12,12 @@
         <title>Himpunan Mahasiswa Informatika ITB</title><!-- This is what you see on your browser tab-->
         
         <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
+        
+        
         <?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); ?>
         <?php wp_enqueue_script("jquery"); ?>
         <?php wp_head(); ?>
 
     </head>
-    <body data-spy="scroll">
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+        

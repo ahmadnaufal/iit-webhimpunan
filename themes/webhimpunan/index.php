@@ -235,10 +235,15 @@
            <h2><span class="icon icon-picture" style="padding-right:10px"></span>Galeri</h2>
            <hr class="separetor">            
         </div><!-- GALLERY SECTIONHEAD END -->
+        <div class="sectioncontent container">
+			<?php echo photo_gallery(3); ?>
+		</div>
+    </div>
+    <!-- GALLERY SECTION END -->
 
 
-    </div><!-- TESTIMONIAL SECTION END -->
-
-
-
+    <!-- ===========================
+    CONTACT SECTION START
+    =========================== -->
 <?php get_footer(); ?>
+	

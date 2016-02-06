@@ -9,7 +9,7 @@
         <!-- ===========================
         SITE TITLE
         =========================== -->
-        <title>Himpunan Mahasiswa Informatika ITB</title><!-- This is what you see on your browser tab-->
+        <title><?php bloginfo('name'); ?></title><!-- This is what you see on your browser tab-->
         
         <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

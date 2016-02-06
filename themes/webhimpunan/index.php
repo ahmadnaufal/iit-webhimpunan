@@ -228,10 +228,15 @@
            <hr class="separetor"> 
               <?php echo photo_gallery(2); ?>           
         </div><!-- GALLERY SECTIONHEAD END -->
+        <div class="sectioncontent container">
+			<?php echo photo_gallery(3); ?>
+		</div>
+    </div>
+    <!-- GALLERY SECTION END -->
 
 
-    </div><!-- TESTIMONIAL SECTION END -->
-
-
-
+    <!-- ===========================
+    CONTACT SECTION START
+    =========================== -->
 <?php get_footer(); ?>
+	

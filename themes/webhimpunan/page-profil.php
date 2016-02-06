@@ -45,16 +45,28 @@
                       <li><a class="page-scroll" href="#structure">Struktur Organisasi</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                  <a class="page-scroll dropdown-toggle" href="../../index.php/#news">Kegiatan  <span class="caret"></span></a>
-                    <ul>
-                      <li><a class="page-scroll" href="../../index.php/#">Kalender & Event</a></li>
-                      <li><a class="page-scroll" href="../../index.php/#">Keprofesian</a></li>
-                      <li><a class="page-scroll" href="../../index.php/#">Pojok Akademik</a></li>
-                    </ul>
-                </li>
+               
+                <li><a class="page-scroll" href="../../index.php/#news">Berita</a></li>
+                <li><a class="page-scroll" href="../../index.php/#event">Agenda</a></li>
 
-                <li><a class="page-scroll" href="../../index.php/#achieve">Prestasi</a></li>
+                <li class="dropdown">
+                    <a class="page-scroll dropdown-toggle" href="#achieve">Prestasi <span class="caret"></span></a>
+                    <ul>
+                    <?php
+                        $prestasi = get_page_by_title( 'Prestasi' );
+                        $mypages = get_pages( array( 'child_of' => $prestasi->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
+
+                        foreach( $mypages as $page ) { 
+                          $link = "index.php/prestasi/#" . $page->ID; 
+                          ?>
+
+                            <li><a class="page-scroll" href="<?php echo $link; ?>"><?php echo $page->post_title; ?></h2></a></li>
+                        <?php
+                        } 
+                    ?>
+                    </ul>
+                  </li>
+
                 <li><a class="page-scroll" href="../../index.php/#gallery">Galeri</a></li>
                 <li><a class="page-scroll" href="#footer">Kontak</a></li>
                 

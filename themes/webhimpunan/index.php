@@ -48,16 +48,28 @@
                               <li><a class="page-scroll" href="index.php/profil/#structure">Struktur Organisasi</a></li>
                             </ul>
                         </li>
+
+                        <li><a class="page-scroll" href="#news">Berita</a></li>
+                        <li><a class="page-scroll" href="#event">Agenda</a></li>
+
                         <li class="dropdown">
-                          <a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="#news">Kegiatan  <span class="caret"></span></a>
-                            <ul>
-                              <li><a class="page-scroll" href="#">Kalender & Event</a></li>
-                              <li><a class="page-scroll" href="#">Keprofesian</a></li>
-                              <li><a class="page-scroll" href="#">Pojok Akademik</a></li>
-                            </ul>
+                          <a class="page-scroll dropdown-toggle" href="#achieve">Prestasi <span class="caret"></span></a>
+                          <ul>
+                          <?php
+                              $prestasi = get_page_by_title( 'Prestasi' );
+                              $mypages = get_pages( array( 'child_of' => $prestasi->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
+
+                              foreach( $mypages as $page ) { 
+                                $link = "index.php/prestasi/#" . $page->ID; 
+                                ?>
+
+                                  <li><a class="page-scroll" href="<?php echo $link; ?>"><?php echo $page->post_title; ?></h2></a></li>
+                              <?php
+                              } 
+                          ?>
+                          </ul>
                         </li>
 
-                        <li><a class="page-scroll" href="#achieve">Prestasi</a></li>
                         <li><a class="page-scroll" href="#gallery">Galeri</a></li>
                         <li><a class="page-scroll"href="#footer">Kontak</a></li>
                         
@@ -108,7 +120,7 @@
     =========================== -->
     <div id="news" class="section2 container">
         <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
-           <h2 style="color:#000000"><span class="icon icon-calendar" style="padding-right:10px"></span> Kegiatan </h2>
+           <h2 style="color:#000000"><span class="icon icon-calendar" style="padding-right:10px"></span> Berita </h2>
            <hr class="separetor">            
         </div><!-- news SECTION HEAD END -->   
         
@@ -151,29 +163,38 @@
             <div class="sectionfooter">
                 <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> SEE ALL</button>
             </div>
+        </div>
 
-        <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
-           <h2 style="color:#000000"><span class="icon icon-calendar" style="padding-right:10px"></span> Events Calendar </h2>
+        
+    
+    <!-- ===========================
+    EVENT START
+    =========================== -->
+    <div id="event" class="container section3">
+      <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
+           <h2 style="color:#000000"><span class="icon icon-calendar" style="padding-right:10px"></span> Agenda </h2>
            <hr class="separetor">            
-        </div><!-- news SECTION HEAD END -->   
+        </div><!-- news SECTION HEAD END -->
+
+
         <div class="sectioncontent container">
            <div class="events-calendar">
                 <?php echo do_shortcode('[calendar id="117"]'); ?>
           </div>
         </div>
         
-    </div>
+      </div>
     <!-- NEWS SECTION END -->
 
 
      <!-- ===========================
     ACHIEVEMENT SECTION START
     =========================== -->
-    <div id="achieve" class="container section3">
+    <div id="achieve" class="container section4">
        
         <!-- ACHIEVEMENT SECTION HEADING START -->
         <div class="sectionhead  row wow fadeInUp">
-            <h2 style="color:#000000"><span class="icon icon-trophy" style="padding-right:10px"></span>Prestasi</h2>
+            <h2><span class="icon icon-trophy" style="padding-right:10px"></span>Prestasi</h2>
            <hr class="separetor"> 
          </div><!--ACHIEVEMENT SECTION HEADING END-->
          
@@ -222,9 +243,9 @@
     <!-- ===========================
     GALLERY SECTION START
     =========================== -->
-    <div id="gallery" class="container section4">
+    <div id="gallery" class="container section3">
         <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
-           <h2><span class="icon icon-picture" style="padding-right:10px"></span>Galeri</h2>
+           <h2 style="color:#000000"><span class="icon icon-picture" style="padding-right:10px"></span>Galeri</h2>
            <hr class="separetor"> 
               <?php echo photo_gallery(2); ?>           
         </div><!-- GALLERY SECTIONHEAD END -->

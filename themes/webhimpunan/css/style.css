@@ -9,9 +9,10 @@
 TYPOGRAPHY
 ================================*/
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto-Light', sans-serif;
     line-height: 1.8em;
     background: #f57f17;
+    overflow-x: hidden;
 }
 
 .bigicon {font-size: 3em; padding-right:5px;}
@@ -23,8 +24,6 @@ p{
     letter-spacing: 1px;
     font-weight: lighter;
     font-size:18px;
-   
-
 }
 
 
@@ -70,7 +69,6 @@ hr.separetor{
 .btnicon {
     margin-right: 10px;
     width: 10px;
-
 }
 
 .brandicon img{
@@ -89,24 +87,29 @@ hr.separetor{
 /*================================
 HERO AREA
 ================================*/
-#hero{
+#header-landing{
     color: #fff;
+    height: 100vh;
+    width: 100vw; 
     text-align: center;
     overflow: hidden;
-    background: url(../img/background.jpg) center center fixed;
+    background: url(../img/background.jpg) center;
 }
 
-.herocontent{
+#herocontent {
     padding-top: 200px;
     padding-bottom: 500px;
     width: 100%;
     max-width: 900px;
+    z-index: 99;
 }
-.heroshot{
-    margin-top: 20px;
-    width: 100%;
-    max-width: 1200px;
 
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
 }
 
 
@@ -141,7 +144,6 @@ HERO AREA
     width:100%;
     background: #424242;
     padding-bottom:20%;
-
 }
 
 /*================================
@@ -275,9 +277,6 @@ blockquote p{
 .quote{overflow: hidden}
 .quote h5{margin-bottom: 5px;}
 
-
-
-
 /*================================
 FOOTER SECTION
 ================================*/
@@ -299,64 +298,6 @@ footer p, footer .bigicon {color: #7e7e7e;}
     letter-spacing: 3px;
 }
 
-.footersocial {margin-top: 30px;}
-
-.footersocial li{
-    display:inline;
-    padding: 0 15px;
-    font-size: 2em;
-}
-
-.footersocial li a {color: #7e7e7e;}
-.footersocial li a:hover {color: #ea9312;}
-
-/*================================
-FOLLOW BUTTON
-================================*/
-.dribbble-follow-button {
-	display: inline-block;
-    margin-top: 15px;
-}
-
-.dribbble-follow-button .label, .dribbble-follow-button .count {
-    font: bold 11px/18px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    border-radius: 3px;
-}
-
-.dribbble-follow-button .label {
-    padding: 0 3px 0 1px;
-    white-space: nowrap;
-    
-}
-
-.dribbble-follow-button .label i {
-    height: 22px;
-    width: 22px;
-    float: left;
-   }
-
-
-.dribbble-follow-button .label:active {            
-     box-shadow: 0 1px 5px rgba(0,0,0,.15) inset;
-}
-
-.dribbble-follow-button .count {
-    margin-left: 5px;
-    padding: 0 3px;
-    color: #333;
-    
-    font-weight: normal;
-   
-}
-
-.dribbble-follow-button .count:hover {
-    text-decoration: underline;
-}
-
 .dribbble-follow-button .count > * {
 	top: 50%;
 	left: 0;
@@ -376,16 +317,21 @@ NAVIGATION BAR
 ================================*/
 .navbar {
     background:#F8C249;
-    font-color:#000;
-    border:0;  
+    color:#000;
+    border:0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
 }
 
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-nav>li>a {
     color: #000; 
     font-size: 20px;
-    
 }
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    background-color: #F8B623;
+}
+
 
 /*================================
 NAVIGATION BAR END

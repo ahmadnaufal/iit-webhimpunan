@@ -39,14 +39,14 @@
         <div class="collapse navbar-collapse">
             <ul class="sf-menu nav navbar-nav navbar-right" id="navigation"><!--YOUR NAVIGATION ITEMS STRAT BELOW-->
                 <li class="dropdown">
-                  <a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="#profile">Profil  <span class="caret"></span></a>
+                  <a class="page-scroll dropdown-toggle" href="#profile">Profil  <span class="caret"></span></a>
                     <ul>
                       <li><a class="page-scroll" href="#history">Sejarah</a></li>
                       <li><a class="page-scroll" href="#structure">Struktur Organisasi</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                  <a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="../../index.php/#news">Kegiatan  <span class="caret"></span></a>
+                  <a class="page-scroll dropdown-toggle" href="../../index.php/#news">Kegiatan  <span class="caret"></span></a>
                     <ul>
                       <li><a class="page-scroll" href="../../index.php/#">Kalender & Event</a></li>
                       <li><a class="page-scroll" href="../../index.php/#">Keprofesian</a></li>

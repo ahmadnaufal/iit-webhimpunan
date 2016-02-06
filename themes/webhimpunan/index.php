@@ -81,7 +81,6 @@
              <h2><span class="icon icon-user" style="padding-right:10px"></span> Profil</h2>
       </div>
  
-        <!-- LEFT PART OF THE profile SECTION --> 
 
         <div class="textbox">
 
@@ -159,7 +158,7 @@
         </div><!-- news SECTION HEAD END -->   
         <div class="sectioncontent container">
            <div class="events-calendar">
-                <?php echo do_shortcode('[calendar id="4"]'); ?>
+                <?php echo do_shortcode('[calendar id="117"]'); ?>
           </div>
         </div>
         
@@ -185,40 +184,33 @@
             <div class="span12">
 
               <div id="owl-demo" class="owl-carousel">
-                
-                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="Lazy Owl Image">
-                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
-                </div>
-               
-                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/gemastik.png" alt="Lazy Owl Image">
-                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
-                </div>
-
-                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="Lazy Owl Image">
-                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
-                </div>
-
-                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="Lazy Owl Image">
-                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
-                </div>
-
-                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/gemastik.png" alt="Lazy Owl Image">
-                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
-                </div>
-
-                <div class="item"><img class="lazyOwl" src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="Lazy Owl Image">
-                    <a href="#" style="font-size:20px; font-family: 'Constantia'; color:#9E9E9E;">ITB Meraih Juara Umum Gemastik 8 2015</a>
-                </div>
-
+                <?php $recent = new WP_Query("pagename=home-prestasi"); while($recent->have_posts()) : $recent->the_post();?>
+                  <?php $contents = get_the_content(); ?>
+                <?php endwhile; ?>
+                <?php
+                  $contents = str_replace("<ul>","",$contents);
+                  $contents = str_replace("<ol>","",$contents);
+                  $contents = explode("<li>",$contents);
+                  $contents = explode("</li>", implode("",$contents));
+                  foreach ($contents as $content) {
+                    ?>
+                    <div class="item"><img class="lazyOwl"/>
+                        <?php echo $content ?>
+                    </div>
+                  <?php
+                  }
+                ?>
               </div>
-
             </div>
           </div>
+
+
+
         </div>
       </div>
 
       <div class="sectionfooter" style="padding-top:10px">
-        <button class="btn" id="archive"><span class="glyphicon glyphicon-book"></span> SEE ALL</button>
+        <button class="btn" id="archive" onclick="location.href='index.php/prestasi/';"><span class="glyphicon glyphicon-book"></span> SEE ALL</button>
       </div>
 
   
@@ -233,7 +225,8 @@
     <div id="gallery" class="container section4">
         <div class="sectionhead wow bounceInUp" data-wow-duration="2s">
            <h2><span class="icon icon-picture" style="padding-right:10px"></span>Galeri</h2>
-           <hr class="separetor">            
+           <hr class="separetor"> 
+              <?php echo photo_gallery(2); ?>           
         </div><!-- GALLERY SECTIONHEAD END -->
 
 

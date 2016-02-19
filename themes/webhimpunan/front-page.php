@@ -49,35 +49,25 @@
     <div class="sectioncontent container">
       <div class="row">
 
-        <div class="col-md-4">
+        <?php if (dynamic_sidebar('third-section')); ?>
+
+        <!-- <div class="col-md-4">
           <div class="news-box">
-            <div class="news-image"></div>
-            <div class="news-content">
-              <h1>News 12</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit officiis debitis quod ut incidunt quam dolores necessitatibus repudiandae molestias at eius reiciendis ad autem, facilis, delectus sunt consectetur architecto quaerat!</p>
-            </div>
+            
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="news-box">
-            <div class="news-image"></div>
-            <div class="news-content">
-              <h1>News 2</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sed et nihil pariatur facere animi dolorum harum molestias dolore libero magni minus, minima esse doloremque aliquam, laborum, enim, nemo! Facilis.</p>
-            </div>
+            
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="news-box">
-            <div class="news-image"></div>
-            <div class="news-content">
-              <h1>News 3</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam vitae accusamus odio odit neque dolor, autem voluptate eveniet. Rerum necessitatibus iusto sequi veritatis perspiciatis nesciunt officiis autem harum voluptatem!</p>
-            </div>
+            
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>

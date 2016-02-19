@@ -35,7 +35,7 @@
     .navbar-collapse.collapse {display: none!important;}
 	.navbar-nav>li {
         float: none;
-        padding-left: 30px;
+        /*padding-left: 30px;*/
         overflow: hidden;
     }
     .collapse.in{display:block !important;}
@@ -49,8 +49,11 @@
     h3{font-size: 1.5em}
     h4{font-size: 1.1em;}
     
-    
-    .myphoto{display: none;}
+    .sub-menu {
+        margin-left: 20px;
+    }
+
+    .collapse-on-mobile{display: none;}
 
     
     /*Hero area*/
@@ -69,14 +72,14 @@
 
 /* Smaller Mobile Devices */
 @media only screen and (max-width : 480px) {
-    #hero{height: 320px;}    
+    #header-landing, .overlay{height: 320px;}    
     #clients {display: none;}
     .footersocial li{font-size: 1.5em}
 }
 
 /* Smallest Mobile Devices */
 @media only screen and (max-width : 320px) {
-    #hero{height: 480px;}
+    #header-landing, .overlay{height: 480px;}
     .herocontent{padding-top: 100px; padding-bottom: 30px;}
 
 }

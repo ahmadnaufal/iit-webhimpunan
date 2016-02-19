@@ -9,21 +9,16 @@
         <!-- ===========================
         SITE TITLE
         =========================== -->
-        <title><?php bloginfo('name'); ?></title><!-- This is what you see on your browser tab-->
+        <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title><!-- This is what you see on your browser tab-->
         
         <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         
         <?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); ?>
         <?php wp_enqueue_script("jquery"); ?>
         <?php wp_head(); ?>
 
     </head>
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" <?php body_class(); ?>>
         <!-- ===========================
          NAVBAR START
          =========================== -->
@@ -43,48 +38,26 @@
                         <span class="icon-bar"></span>
                     </button>
                         
-                    <a class="navbar-brand page-scroll" href="#hero">
+                    <a class="navbar-brand page-scroll" href="<?php bloginfo('url') ?>">
                         <div class="brandicon">
                             <img src="<?php bloginfo('template_directory'); ?>/img/hmif1.png" alt="HMIF" style="float:none">
-                                Home
+                                <span class="collapse-on-mobile"><?php bloginfo('name') ?></span>
                         </div> 
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav sf-menu navbar-right" id="navigation"><!--YOUR NAVIGATION ITEMS STRAT BELOW-->
-                        <li class="dropdown">
-                            <a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="#profile">Profil  <span class="caret"></span></a>
-                            <ul>
-                                <li><a class="page-scroll" href="index.php/profil/#history">Sejarah</a></li>
-                                <li><a class="page-scroll" href="index.php/profil/#structure">Struktur Organisasi</a></li>
-                            </ul>
-                        </li>
+                    
+                    <?php 
 
-                        <li><a class="page-scroll" href="#news">Berita</a></li>
-                        <li><a class="page-scroll" href="#event">Agenda</a></li>
-
-                        <li class="dropdown">
-                            <a class="page-scroll dropdown-toggle" href="#achieve">Prestasi <span class="caret"></span></a>
-                            <ul>
-
-                                <?php
-                                    $prestasi = get_page_by_title( 'Prestasi' );
-                                    $mypages = get_pages( array( 'child_of' => $prestasi->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
-
-                                    foreach( $mypages as $page ) { 
-                                        $link = "index.php/prestasi/#" . $page->ID; 
-                                ?>
-
-                                <li><a class="page-scroll" href="<?php echo $link; ?>"><?php echo $page->post_title; ?></h2></a></li>
-                                <?php } ?>
-                            </ul>
-                        </li>
-
-                        <li><a class="page-scroll" href="#gallery">Galeri</a></li>
-                        <li><a class="page-scroll"href="#footer">Kontak</a></li>
-                        
-                    </ul>
+                        $args = array(
+                            'menu' => 'header-menu',
+                            'menu_class' => 'nav navbar-nav sf-menu navbar-right',
+                            'menu_id' => 'navigation',
+                            'container' => 'false'
+                        );
+                        wp_nav_menu($args);
+                     ?>
                 
                 </div><!--.nav-collapse -->
             </div>

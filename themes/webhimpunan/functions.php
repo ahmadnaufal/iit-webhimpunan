@@ -19,6 +19,8 @@ function register_theme_menus() {
 	);
 }
 
+add_action( 'init', 'register_theme_menus' );
+
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
 		'before_widget' => '',
@@ -26,4 +28,24 @@ if ( function_exists('register_sidebar') )
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
+
+function create_widget($name, $id, $description)
+{
+	register_sidebar(array(
+		'name' => __( $name ),
+		'id' => $id,
+		'description' => __( $description ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
+}
+
+create_widget("First Section", "first-section", "Displays on the first section of the website.");
+create_widget("Second Section", "second-section", "Displays on the second section of the website.");
+create_widget("Third Section", "third-section", "Displays on the third section of the website.");
+create_widget("Fourth Section", "fourth-section", "Displays on the fourth section of the website.");
+create_widget("Fifth Section", "fifth-section", "Displays on the fifth section of the website.");
+
 ?>

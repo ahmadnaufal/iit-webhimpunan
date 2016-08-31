@@ -48,4 +48,6 @@ create_widget("Third Section", "third-section", "Displays on the third section o
 create_widget("Fourth Section", "fourth-section", "Displays on the fourth section of the website.");
 create_widget("Fifth Section", "fifth-section", "Displays on the fifth section of the website.");
 
+create_widget("Page Sidebar", "page-sidebar", "Displays on the sidebar section (right side screen)");
+
 ?>

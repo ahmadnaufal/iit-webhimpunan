@@ -8,19 +8,6 @@
         <div class="container">
             <span class="bigicon icon-speedometer "></span>
              
-            <div class="footerlinks"><!-- FOOTER LINKS START -->            
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#profile">Profile</a></li>
-                    <li><a href="#achieve">Prestasi</a></li>
-                    <li><a href="#news">Kegiatan</a></li>
-                    <li><a href="#gallery">Galeri</a></li>
-
-                    <!--replace the email address below with your email address-->
-                    <li><a href="mailto:m@creatrix.us">Contact</a></li>                   
-                </ul>
-            </div><!-- FOOTER LINKS END -->
-             
          </div>
          <p style="color:#000000; font-size:12px"> Created by : <br>
           <img src="<?php bloginfo('template_directory'); ?>/img/logo-iit.png" style="width:100px; height:100px; padding-bottom:10px"></img><br>
